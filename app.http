@@ -1,0 +1,79 @@
+//Users table
+GET http://localhost:8000/api/users/3
+
+###
+POST http://localhost:8000/api/users
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "Jane",
+  "contact_phone": "+254714434532",
+  "phone_verified": false,
+  "email": "k@gmail.com",
+  "email_verified": false,
+  "confirmation_code": "3j32q",
+  "password": "123453",
+  "address": "kutus",
+  "Comment": "I am a senior developer",
+  "driver": "Kalvin",
+  "orders": "9",
+  "restaurant_owner": "James"
+}
+###
+PUT http://localhost:8000/api/users/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Janelt",
+  "contact_phone": "+254714434532",
+  "phone_verified": false,
+  "email": "janelt@gmail.com",
+  "email_verified": false,
+  "confirmation_code": "3j32q",
+  "password": "123453",
+  "created_at": "2024-06-06T13:00:04.403Z",
+  "updated_at": "2024-06-06T13:00:04.403Z",
+  "address": "kagio",
+  "Comment": "I am a senior developer",
+  "driver": "KalvinKlein",
+  "orders": "9",
+  "restaurant_owner": "James"
+}
+###
+DELETE http://localhost:8000/api/users/2
+
+//status catalog table
+GET http://localhost:8000/statcat
+###
+POST http://localhost:8000/statcat
+###
+GET http://localhost:8000/add
+###
+POST http://localhost:8000/driver
+Content-Type: application/json
+
+[
+  {
+    "id": 8,
+    "car_make": "mazda",
+    "car_model": "toyota",
+    "car_year": 2009,
+    "user_id": 2,
+    "online": true,
+    "delivering": true,
+    "users": "2",
+    "orders": "2"
+  }]
+
+###
+POST http://localhost:8000/statcat
+Content-Type: application/json
+
+  {
+    "id": 7,
+    "name": "cakes request",
+    "order_status": "pending"
+  }
+ 
